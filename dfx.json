@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "dtoken": {
+      "main": "src/dtoken/main.mo",
+      "type": "motoko"
+    },
+    "dtoken_assets": {
+      "dependencies": [
+        "dtoken"
+      ],
+      "frontend": {
+        "entrypoint": "src/dtoken_assets/src/index.html"
+      },
+      "source": [
+        "src/dtoken_assets/assets",
+        "dist/dtoken_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
